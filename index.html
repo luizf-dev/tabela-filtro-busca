@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Tabela filtro de busca</title>
+        <meta name="description" content="">
+        <!--CSS-->
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <div class="container">
+                <div class="search">
+                    <label>Pesquisar:  </label>
+                    <input class="input-field" id="myInput" type="text" placeholder="Search...">
+                </div>        
+            <div>
+                <div>
+                    <table>
+                        <thead>
+                            <tr>                   
+                                <th>Código</th>
+                                <th>Nome</th>
+                                <th>Email</th>
+                                <th>Telefone</th>
+                            </tr>
+                        </thead>
+                        <tbody id="myTable">                   
+                            <tr>
+                                <td>01</td>                            
+                                <td>Luiz Fernando</td>                            
+                                <td>teste@hotmail.com</td>                            
+                                <td>55 11 99888 4789</td>
+                            </tr>
+
+                            <tr>
+                                <td>02</td>                            
+                                <td>Caio Augustus</td>                            
+                                <td>teste@hotmail.com</td>                            
+                                <td>55 88 99977 5685</td>
+                            </tr>
+
+                            <tr>
+                                <td>03</td>                            
+                                <td>Roberto Carlos</td>                            
+                                <td>teste@hotmail.com</td>                            
+                                <td>55 44 99985 5647</td>
+                            </tr>
+
+                            <tr>
+                                <td>04</td>                            
+                                <td>Rivelino Dalcoquio</td>                            
+                                <td>teste@hotmail.com</td>                            
+                                <td>11 48 99965 2314</td>
+                            </tr>
+                        
+                        </tbody>
+                    </table>  
+                </div>
+            </div>
+        </div>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script>
+        $(document).ready(function(){
+        $("#myInput").on("keyup", function() {
+            var value = $(this).val().toLowerCase();
+            $("#myTable tr").filter(function() {
+            $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+            });
+        });
+        });
+        </script>
+
+    </body>
+</html>
