@@ -5,13 +5,11 @@ body{
 }
 
 .container{
-    width: 900px;
+    width: 1000px;
     background-color: #67917d;
-    margin: 50px 200px;
+    margin-left: 150px;
     padding: 40px;
     box-shadow: 5px 5px 8px #000;
-    border-top-right-radius: 30px;
-    border-bottom-left-radius: 30px;
 }
 
 .search{
@@ -28,8 +26,8 @@ table{
     width: 80%;
     border-collapse: collapse;
     margin: 50px 100px;
-    background-color: #ededdd;
-    border: 2px solid #111;
+    background-color: #fff;
+    border: 1px solid #111;
     box-shadow: 5px 5px 10px #000;
 }
 
@@ -41,7 +39,7 @@ th,td{
     padding: 7px;
     text-align: center;
     border: 2px solid #111;
-    cursor: vertical-text;
+    cursor: pointer;
 }
 
 th{
@@ -57,7 +55,6 @@ tbody tr:hover{
 .search .input-field{
     margin-left: 20px;
     border: 1px solid #000;
-    border-radius: 5px;
 }
 
 .search .input-field::placeholder{
